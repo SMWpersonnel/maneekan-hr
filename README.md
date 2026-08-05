@@ -1,64 +1,25 @@
-# Maneekan HR Center
+# Maneekan HR Center — Multi-page
 
-เว็บไซต์ต้นแบบสำหรับ **กลุ่มบริหารงานบุคคล โรงเรียนไทรโยคมณีกาญจน์วิทยา**
+เว็บไซต์ถูกแยกเป็นหลายหน้าแล้ว:
 
-โทนสีหลัก: **เขียวเข้ม–เหลืองทอง–ขาว**
+- `index.html` หน้าแรก
+- `personnel.html` บุคลากร
+- `services.html` บริการออนไลน์
+- `news.html` ข่าวและประกาศ
+- `forms.html` แบบฟอร์ม
+- `calendar.html` ปฏิทิน
+- `contact.html` ติดต่อเรา
 
-## ไฟล์หลัก
+## วิธีอัปโหลดทับเว็บไซต์เดิมบน GitHub
 
-- `index.html` — หน้าเว็บไซต์
-- `css/style.css` — สี รูปแบบ และการแสดงผลบนมือถือ
-- `js/main.js` — เมนูมือถือ แถบแจ้งเตือน และเมนูตามตำแหน่งการเลื่อน
-- `assets/logo-placeholder.svg` — ตราสัญลักษณ์ตัวอย่าง กรุณาแทนที่ด้วยตราโรงเรียนจริง
+1. สำรอง Repository เดิม หรือสร้าง Branch ใหม่
+2. ลบ/แทนที่ไฟล์เดิมด้วยไฟล์ทั้งหมดในโฟลเดอร์นี้
+3. ต้องรักษาโครงสร้าง `css`, `js`, `assets`
+4. กด Commit changes
+5. เปิด GitHub Pages แล้วกด Ctrl + F5
 
-## วิธีเปิดดูบนคอมพิวเตอร์
+## จุดที่ต้องเปลี่ยน
 
-ดับเบิลคลิกไฟล์ `index.html`
-
-## วิธีนำขึ้น GitHub Pages
-
-1. สร้าง Repository ใหม่ เช่น `maneekan-hr`
-2. อัปโหลดไฟล์และโฟลเดอร์ทั้งหมด
-3. ไปที่ **Settings → Pages**
-4. ในหัวข้อ **Build and deployment**
-5. เลือก **Deploy from a branch**
-6. เลือก Branch `main` และ Folder `/ (root)`
-7. กด Save
-8. รอสักครู่ เว็บไซต์จะอยู่ที่  
-   `https://ชื่อบัญชี.github.io/maneekan-hr/`
-
-## จุดที่ต้องแก้ก่อนใช้งานจริง
-
-ค้นหาคำว่า `data-placeholder-link` ใน `index.html` แล้วแก้ `href="#"` เป็นลิงก์จริง เช่น
-
-```html
-<a href="https://script.google.com/macros/s/..." target="_blank">
-```
-
-ลิงก์ที่ควรเตรียม:
-
-- ระบบลงชื่อปฏิบัติราชการ
-- ระบบลงชื่อกลับบ้าน
-- ระบบการลา
-- ระบบ PA
-- แบบรายงานการอบรม
-- แบบขอหนังสือรับรอง
-- โฟลเดอร์ Google Drive สำหรับดาวน์โหลดเอกสาร
-
-## การเปลี่ยนตราโรงเรียน
-
-วางไฟล์ตราโรงเรียนจริงที่ `assets/logo.png` แล้วแก้ใน `index.html` จาก
-
-```html
-<img src="assets/logo-placeholder.svg">
-```
-
-เป็น
-
-```html
-<img src="assets/logo.png">
-```
-
-## หมายเหตุด้านข้อมูลส่วนบุคคล
-
-อย่าใส่รหัสผ่าน Token ข้อมูลเงินเดือน เลขบัตรประชาชน หรือข้อมูลส่วนบุคคลที่เป็นความลับลงใน GitHub Repository
+ค้นหาคำว่า `data-placeholder-link` เพื่อใส่ลิงก์ Google Form, Drive หรือ Apps Script จริง  
+เปลี่ยน `assets/logo-placeholder.svg` เป็นตราโรงเรียนจริง  
+แก้ข้อมูลตัวอย่าง ข่าว วันที่ บุคลากร และกำหนดการก่อนใช้งานจริง
