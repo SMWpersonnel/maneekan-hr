@@ -21,6 +21,7 @@ if (menuButton && mainNav) {
 document.querySelectorAll("[data-placeholder-link]").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
+    if (!toast) return;
     toast.classList.add("show");
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => toast.classList.remove("show"), 3800);
